@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      flex: 1;
+    }
+
+    nav {
+      width: 250px;
+      background-color: #222;
+      color: white;
+      padding: 20px;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+      transition: width 0.3s;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      display: block;
+      padding: 10px 0;
+    }
+
+    main {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .menu-toggle {
+      display: none;
+      cursor: pointer;
+    }
+
+    @media screen and (max-width: 768px) {
+      nav {
+        width: 0;
+      }
+
+      nav.open {
+        width: 200px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      main {
+        order: -1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Sidebar Menu</h1>
+</header>
+
+<div class="container">
+  <nav id="sidebar">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <main>
+    <div class="menu-toggle" onclick="toggleSidebar()">&#9776; Menu</div>
+    <p>Content goes here.</p>
+  </main>
+</div>
+
+<script>
+  function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('open');
+  }
+</script>
+
+</body>
+</html>
