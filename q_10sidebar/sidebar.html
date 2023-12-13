@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    
+  </style>
+  <link rel="stylesheet" href="sidebar.css">
+</head>
+<body>
+
+<header>
+  <h1>Welcome!</h1>
+</header>
+
+<div class="container">
+  <nav id="sidebar">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <main>
+    <div class="menu-toggle" onclick="toggleSidebar()">&#9776; Menu</div>
+    <p>Life is good if you choose to view it in that way!</p>
+    <img src="../IMG_7105.JPG" alt="">
+  </main>
+</div>
+
+<script>
+  function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('open');
+  }
+</script>
+
+</body>
+</html>

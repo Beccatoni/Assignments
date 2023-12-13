@@ -3,128 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    .navbar {
-      background-color: #333;
-      overflow: hidden;
-    }
-
-    .navbar a {
-      float: left;
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-    }
-
-    .dropdown {
-      float: left;
-      overflow: hidden;
-    }
-
-    .dropdown .dropbtn {
-      font-size: 16px;
-      border: none;
-      outline: none;
-      color: white;
-      padding: 14px 16px;
-      background-color: inherit;
-      font-family: inherit;
-      margin: 0;
-    }
-
-    .navbar a:hover, .dropdown:hover .dropbtn {
-      background-color: #ddd;
-      color: black;
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #f9f9f9;
-      min-width: 160px;
-      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-      z-index: 1;
-    }
-
-    .dropdown-content a {
-      float: none;
-      color: black;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-      text-align: left;
-    }
-
-    .dropdown-content a:hover {
-      background-color: #ddd;
-    }
-
-    @media screen and (max-width: 600px) {
-      .navbar a, .dropdown:hover .dropbtn {
-        display: none;
-      }
-
-      .navbar a.icon, .dropdown {
-        display: block;
-      }
-
-      .navbar.responsive {
-        position: relative;
-      }
-
-      .navbar.responsive a.icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-      }
-
-      .navbar.responsive a, .dropdown-content {
-        display: block;
-        width: 100%;
-        text-align: center;
-      }
-    }
-  </style>
+  <title>Dropdown</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-<div class="navbar" id="navbar">
-  <a href="#">Home</a>
-  <a href="#">About</a>
-  <div class="dropdown">
-    <button class="dropbtn">Menu 
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="#">Item 1</a>
-      <a href="#">Item 2</a>
-      <a href="#">Item 3</a>
+  <div class="topnav" id="mytopnav">
+    <a href="#home" class="active">Home</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <div class="dropdown">Languages
+      <button class="drpdwnbtn">
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="drpdwm-content">
+        <a href="#">Python</a>
+        <a href="#">Node Js</a>
+        <a href="#">Ruby</a>
+        <a href="#">R</a>
+      </div>
     </div>
+    <a href="#about"></a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
   </div>
-  <a href="#">Contact</a>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    &#9776;
-  </a>
-</div>
-
-<script>
-  function myFunction() {
-    var x = document.getElementById("navbar");
-    if (x.className === "navbar") {
-      x.className += " responsive";
-    } else {
-      x.className = "navbar";
-    }
-  }
-</script>
-
 </body>
 </html>
